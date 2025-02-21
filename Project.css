@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #64ffda;
+    --background-color: #0a192f;
+    --card-background: #112240;
+    --text-color: #ccd6f6;
+    --highlight-color: #64ffda;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-list {
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-name {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        rgba(100, 255, 218, 0.1),
+        transparent
+    );
+    transition: all var(--transition-speed) ease;
+}
+
+.project-name:hover {
+    background: linear-gradient(
+        to right,
+        rgba(100, 255, 218, 0.2),
+        transparent
+    );
+}
+
+.project-name h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.toggle-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: transform var(--transition-speed);
+}
+
+.project-details {
+    height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: all var(--transition-speed) ease-in-out;
+    background-color: var(--card-background);
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.project-details.active {
+    height: auto;
+    padding: 1.5rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+/* Hover Effects */
+.project-list {
+    transition: transform var(--transition-speed);
+}
+
+.project-list:hover {
+    transform: translateX(10px);
+}
+
+.project-name.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* Neo Background Effect */
+.container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(100, 255, 218, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 85% 85%, rgba(100, 255, 218, 0.05) 0%, transparent 20%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .project-name h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-details {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-name {
+        padding: 1rem;
+    }
+
+    .project-details.active {
+        padding: 1rem;
+    }
+}

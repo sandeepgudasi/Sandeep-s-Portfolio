@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="Project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="projects">
+            <div class="project-list">
+                <div class="project-name" onclick="toggleProject('project1')">
+                    <h2>Automated Irrigation System</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="project-details" id="project1">
+                    <p>An <span class="highlight">Automated Irrigation System using Raspberry Pi</span> is a smart farming solution designed to optimize water usage and improve crop health. This system utilizes <span class="highlight">Raspberry Pi</span> as the central controller, which gathers real-time data from <span class="highlight">soil moisture sensors, temperature sensors, and humidity sensors</span>. Based on predefined moisture thresholds, the Raspberry Pi automatically <span class="highlight">activates or deactivates water pumps or solenoid valves</span>, ensuring plants receive the required amount of water. Additionally, the system can be integrated with <span class="highlight">IoT and cloud services</span> to enable remote monitoring and control via a mobile app or web interface. By reducing manual intervention, preventing water wastage, and enhancing efficiency, this automated irrigation system is a cost-effective and eco-friendly solution for modern agriculture.</p>
+                </div>
+            </div>
+
+            <div class="project-list">
+                <div class="project-name" onclick="toggleProject('project2')">
+                    <h2>Fitness Tracker Website</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="project-details" id="project2">
+                    <p>A <span class="highlight">Fitness Tracker Website</span> is a comprehensive online platform designed to help users achieve their health and fitness goals. It offers a range of features including <span class="highlight">exercise tracking, nutrition planning, and progress monitoring</span>. Users can set personalized targets, monitor their progress, and receive recommendations for improving their health and fitness. The website also includes a community feature, allowing users to connect with others who share similar goals and challenges. With its user-friendly interface and personalized tracking tools, the fitness tracker website is a valuable resource for anyone looking to improve their health and fitness.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Project.js"></script>
+</body>
+</html>
